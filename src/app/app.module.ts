@@ -9,22 +9,20 @@ import { HomeComponent } from './pages/home/home.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { TvshowsComponent } from './pages/tvshows/tvshows.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    MoviesComponent,
-    TvshowsComponent,
-    CategoriesComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        HomeComponent,
+        MoviesComponent,
+        TvshowsComponent,
+        CategoriesComponent
+    ],
+    imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
