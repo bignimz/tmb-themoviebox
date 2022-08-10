@@ -12,17 +12,17 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HeaderComponent,
-        FooterComponent,
-        HomeComponent,
-        MoviesComponent,
-        TvshowsComponent,
-        CategoriesComponent
-    ],
-    imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-    providers: [],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    MoviesComponent,
+    TvshowsComponent,
+    CategoriesComponent
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
