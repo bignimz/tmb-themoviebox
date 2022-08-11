@@ -11,6 +11,7 @@ import { TvshowsComponent } from './pages/tvshows/tvshows.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SliderComponent } from './components/slider/slider.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { SliderComponent } from './components/slider/slider.component';
     CategoriesComponent,
     SliderComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
