@@ -2,17 +2,19 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
+import { MovieDto } from '../models/movie';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesService {
-  apiUrl = 'https://api.themoviedb.org/4/list/1?api_key=';
+  baseUrl: string = 'https://api.themoviedb.org/3';
+  apiKey: string = `${environment.apiKey}`;
 
   constructor(private http: HttpClient) {}
 
   // Create a method to get movies
-  getMovies() {
-    return this.http.get('https://api.themoviedb.org/4/list/1?api_key=671ed7b02c08ea9e6a92cb4313845624');
+  getMovies(type: string = 'popular') {
+    return this.http.get<MovieDto>(`${this.baseUrl}/movie/${type}?api_key=${this.apiKey}`);
   }
 }
