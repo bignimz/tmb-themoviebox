@@ -1,1 +1,5 @@
-<p>movies works!</p>
+<div class="container-fluid py-5">
+  <div class="row row-cols-lg-6 row-cols-md-6 row-cols-sm-2 gx-2 py-5">
+    <div class="col-md-3 mb-3 mx-auto" *ngFor="let movie of movies"><item [itemData]="movie"></item></div>
+  </div>
+</div>
